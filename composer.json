@@ -2,6 +2,6 @@
     "name": "felipezcanal/yii2-simple-blog",
     "description": "A simple blog structure for Yii2 framework",
     "require": {
-        "php": ">=7.2",
+        "php": ">=7.2"
     }
 }
