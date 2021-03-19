@@ -1,7 +1,37 @@
 {
     "name": "felipezcanal/yii2-simple-blog",
     "description": "A simple blog structure for Yii2 framework",
+    "type": "yii2-extension",
+    "authors": [
+        {
+            "name": "Felipe Zago Canal",
+            "email": "felipe.z.canal@gmail.com",
+            "role" : "Creator"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {
-        "php": ">=7.1"
-    }
+        "php": ">=7.1",
+        "yiisoft/yii2": "2.0.41.1"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.5",
+        "phpstan/phpstan": "^0.12.78"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "felipezcanal\\blog\\":"./src"
+        }
+    },
+    "scripts": {
+        "phpstan": "./vendor/bin/phpstan analyse -c phpstan.neon --memory-limit=-1 --no-progress -vvv .",
+        "phpcs": "./vendor/bin/phpcs --extensions=php --standard=.phpcs.xml  --encoding=UTF-8 --error-severity=1 --warning-severity=8 --report=full --report-width=75 --tab-width=4 -p --report=json ."
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ]
 }
